@@ -3,105 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LagosHype - Latest Lagos Gist & Hype</title>
+<title>LagosHype</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:#f0f2f5;color:#111}
-header{background:#111;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-.logo{font-weight:900;font-size:22px} .logo span{color:#FFD600}
-.badge{background:#FFD600;color:#111;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:900}
-.hero{background:linear-gradient(135deg,#111 0%,#222 100%);color:#fff;padding:32px 16px;text-align:center}
-.hero h1{font-size:30px;line-height:1.1;margin-bottom:8px} .hero h1 span{color:#FFD600}
-.hero p{opacity:.85;font-size:14px;margin-bottom:16px}
-.btn{display:inline-block;background:#FFD600;color:#111;padding:12px 22px;border-radius:10px;font-weight:800;text-decoration:none;font-size:14px}
-.tabs{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;background:#fff;position:sticky;top:52px;z-index:90;border-bottom:1px solid #eee}
-.tab{white-space:nowrap;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:700;background:#f0f2f5;color:#555;text-decoration:none}
-.tab.active{background:#111;color:#FFD600}
-.grid{padding:12px 12px 80px;display:grid;gap:12px}
-.card{background:#fff;border-radius:16px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.06);display:flex;gap:12px}
-.card img{width:80px;height:80px;border-radius:10px;object-fit:cover;background:#eee;flex-shrink:0}
-.card-content{flex:1}
-.cat{font-size:10px;font-weight:800;padding:3px 8px;border-radius:4px;margin-bottom:6px;display:inline-block}
-.card-content h3{font-size:15px;line-height:1.3;margin-bottom:4px}
-.card-content p{font-size:12px;color:#666;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.meta{margin-top:8px;display:flex;gap:10px;font-size:10px;color:#999}
-.footer{text-align:center;padding:20px;color:#999;font-size:11px;line-height:1.6}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#dbeafe}
+.header{background:#111;color:#fff;padding:10px 16px;display:flex;justify-content:space-between;font-weight:700;position:sticky;top:0;z-index:100}
+.header button{background:none;border:none;color:#fff;font-size:13px}
+.center{text-align:center;padding:20px 16px}
+.crown{font-size:28px}
+.center h1{font-size:28px;font-weight:900} .center h1 span{font-size:12px;background:#111;color:#fff;border-radius:50%;padding:2px 6px;vertical-align:super}
+.center p{font-size:13px;color:#555;margin-top:4px}
+.card{background:#fff;border-radius:20px;padding:16px;margin:16px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.tabs{display:flex;background:#f1f5f9;border-radius:12px;padding:3px;margin-bottom:12px}
+.tab{flex:1;text-align:center;padding:8px;border-radius:8px;font-size:12px;font-weight:700;color:#666}
+.tab.active{background:#fff;color:#111;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.input{width:100%;padding:12px;border-radius:12px;border:1px solid #e2e8f0;margin:6px 0;font-size:13px}
+.btn-green{width:100%;background:#22c55e;color:#fff;border:none;padding:14px;border-radius:14px;font-weight:800;font-size:14px;margin-top:10px}
+.link-row{display:flex;justify-content:space-between;font-size:11px;color:#3b82f6;margin-top:8px}
+.bottom-nav{position:fixed;bottom:12px;left:12px;right:12px;background:#fff;border-radius:24px;display:flex;justify-content:space-around;padding:8px;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.nav-item{text-align:center;font-size:10px;color:#666;padding:6px 14px;border-radius:16px}
+.nav-item.active{background:#111;color:#FFD600}
+.grid{padding:0 16px 100px;display:grid;gap:10px}
+.news{background:#fff;border-radius:16px;padding:12px;display:flex;gap:10px}
+.news img{width:60px;height:60px;border-radius:10px;background:#eee;object-fit:cover}
+.news h3{font-size:13px;line-height:1.3} .news p{font-size:11px;color:#666;margin-top:2px}
+.splash{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;animation:hide 1.5s forwards 1.5s}
+.splash b{font-size:70px;color:#FFD600}
+@keyframes hide{to{opacity:0;visibility:hidden}}
 </style>
 </head>
 <body>
-<header><div class="logo">Lagos<span>Hype</span></div><div class="badge">● LIVE</div></header>
+<div class="splash"><b>LH</b></div>
+<div class="header"><span>LagosHype</span><button onclick="location.reload()">Refresh</button></div>
 
-<div class="hero">
-<h1>Lagos<span>Hype</span> is Live!</h1>
-<p>🔥 Hottest Gist, Entertainment & Street Hype for Lagos</p>
-<a class="btn" href="#latest">Explore Latest Hype →</a>
+<div id="loginView">
+<div class="center">
+<div class="crown">👑</div>
+<h1>LagosHype <span>18+</span></h1>
+<p>Live your Lagos hype with real gist.</p>
 </div>
-
-<div class="tabs">
-<a class="tab active">🔥 Latest</a>
-<a class="tab">🎬 Entertainment</a>
-<a class="tab">🎵 Music</a>
-<a class="tab">� gist</a>
-<a class="tab">⚽ Street</a>
-</div>
-
-<div class="grid" id="latest">
-
 <div class="card">
-<img src="https://picsum.photos/seed/lagos1/200/200" alt="">
-<div class="card-content">
-<span class="cat" style="background:#FFD600;color:#111">TRENDING NOW</span>
-<h3>Welcome to LagosHype Official App!</h3>
-<p>We don launch! Your new home for hot Lagos gist don dey live for free domain lagoshype.vercel.app. No more 404 error!</p>
-<div class="meta"><span>2 mins ago</span><span>• 1.2k views</span></div>
+<div class="tabs"><div class="tab">Create account</div><div class="tab active">Log in</div></div>
+<label style="font-size:11px;color:#666">Username or email</label>
+<input class="input" value="tolu_eko" id="user">
+<label style="font-size:11px;color:#666">Password</label>
+<input class="input" type="password" placeholder="••••••••" id="pass">
+<div class="link-row"><span>Forgot password?</span><span>Can't get in?</span></div>
+<button class="btn-green" onclick="showHome()">Log in</button>
+<p style="text-align:center;font-size:11px;color:#999;margin-top:8px">Welcome to Hype City.</p>
 </div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/seed/wizkid/200/200" alt="">
-<div class="card-content">
-<span class="cat" style="background:#FFCCBC">ENTERTAINMENT</span>
-<h3>Wizkid Shuts Down Lekki Last Night - Fans Go Crazy!</h3>
-<p>Starboy pull up for Quilox with 2 G-Wagons, spend 50k on suya alone. See videos wey dey trend...</p>
-<div class="meta"><span>1 hour ago</span><span>• 5.4k views</span></div>
+<div id="homeView" style="display:none">
+<div class="center"><h1>LagosHype</h1><p>Live your hype story.</p></div>
+<div class="grid">
+<div class="news"><img src="https://picsum.photos/seed/hype1/200/200"><div><h3>🔥 Wizkid Shutdown Lekki Last Night</h3><p>50k suya + 2 G-Wagon - fans para...</p></div></div>
+<div class="news"><img src="https://picsum.photos/seed/hype2/200/200"><div><h3>🎵 Davido Amapiano Banger Don Burst Street</h3><p>OBO x Asake don scatter clubs...</p></div></div>
+<div class="news"><img src="https://picsum.photos/seed/hype3/200/200"><div><h3>⚡ UP NEPA! Light don come for Lekki</h3><p>After 3 days darkness - residents jubilate...</p></div></div>
+<div class="news"><img src="https://picsum.photos/seed/hype4/200/200"><div><h3>💸 Street Gist: How to make N10k daily for Lagos</h3><p>Okrika boy share update...</p></div></div>
+</div>
+<div class="bottom-nav">
+<div class="nav-item active">🏠<br>Home</div>
+<div class="nav-item">🛍️<br>Buy</div>
+<div class="nav-item">🗺️<br>Map</div>
+<div class="nav-item" onclick="location.reload()">🔄<br>Refresh</div>
 </div>
 </div>
 
-<div class="card">
-<img src="https://picsum.photos/seed/davido/200/200" alt="">
-<div class="card-content">
-<span class="cat" style="background:#C5E1A5">MUSIC</span>
-<h3>Davido Drops New Amapiano Banger - Street Don Burst!</h3>
-<p>OBO just drop track with Asake - DJ for all Lagos clubs don dey play am since morning...</p>
-<div class="meta"><span>3 hours ago</span><span>• 3.1k views</span></div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/seed/burnaboy/200/200" alt="">
-<div class="card-content">
-<span class="cat" style="background:#FFE082">GIST</span>
-<h3>App Connected ✅ No More Error - How It Works</h3>
-<p>If you dey see this inside your app, e mean say free domain don work. Edit GitHub to add gist!</p>
-<div class="meta"><span>5 hours ago</span><span>• 2k views</span></div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/seed/lagosstreet/200/200" alt="">
-<div class="card-content">
-<span class="cat" style="background:#B3E5FC">STREET</span>
-<h3>Lekki Traffic Today: Alternative Routes Wey Go Save You</h3>
-<p>Third Mainland Bridge hold up again? Use this 3 shortcut - you go reach VI in 20 mins...</p>
-<div class="meta"><span>8 hours ago</span><span>• 890 views</span></div>
-</div>
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 LagosHype • Powered by Vercel FREE<br>
-From Okrika to Lekki — We Cover Lagos Hype
-</div>
+<script>
+function showHome(){
+document.getElementById('loginView').innerHTML='<div class="center"><h1>LagosHype</h1><p>Loading your hype...</p><div style="margin:20px auto;width:24px;height:24px;border:3px solid #ddd;border-top:3px solid #111;border-radius:50%;animation:spin 1s linear infinite"></div></div>';
+setTimeout(()=>{
+document.getElementById('loginView').style.display='none';
+document.getElementById('homeView').style.display='block';
+},1200);
+}
+</script>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 </body>
 </html>
